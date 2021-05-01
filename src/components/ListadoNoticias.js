@@ -3,8 +3,11 @@ import Noticia from "./Noticia";
 
 const ListadoNoticias = ({ news }) => (
   <div className="row">
-    {news.map((news) => (
-      <Noticia />
+    {news.map((newsURL) => (
+      <Noticia 
+        key={newsURL.url}
+        newsURL={newsURL}
+      />
     ))}
   </div>
 );
