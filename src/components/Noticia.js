@@ -2,7 +2,6 @@ import React from "react";
 
 const Noticia = ({ newsURL }) => {
   // Extraer los datos
-
   const { urlToImage, url, title, description, source } = newsURL;
 
   const image = urlToImage ? (

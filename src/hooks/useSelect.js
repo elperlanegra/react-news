@@ -5,14 +5,16 @@ const useSelect = (stateStart, option) => {
   const [state, updateState] = useState(stateStart);
 
   const SelectNotices = () => (
-    <select 
-        className="browser-default"
-        value={state}
-        onChange={e => updateState(e.target.value)}
-        >
-        {option.map(option => (
-            <option key={option.value} value={option.value}>{option.label}</option>
-        ))}
+    <select
+      className="browser-default"
+      value={state}
+      onChange={(e) => updateState(e.target.value)}
+    >
+      {option.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
     </select>
   );
 
@@ -20,4 +22,3 @@ const useSelect = (stateStart, option) => {
 };
 
 export default useSelect;
-

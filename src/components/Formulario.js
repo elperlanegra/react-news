@@ -26,9 +26,7 @@ const Formulario = ({ saveCategory }) => {
   return (
     <div className={`${styles.buscador} row`}>
       <div className="col s12 m8 offset-m2">
-        <form
-          onSubmit={searchNotices}
-        >
+        <form onSubmit={searchNotices}>
           <h2 className={styles.heading}>Encuentra Noticias por Categoria</h2>
 
           <SelectNotices />
