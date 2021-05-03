@@ -14,10 +14,12 @@ const Noticia = ({ newsURL }) => {
   return (
     <div className="col s12 m6 l4">
       <div className="card">
-        {image}
+        <div className="card-image">
+          {image}
+          <span className="card-title">{title}</span>
+        </div>
 
         <div className="car-content">
-          <h3>{title}</h3>
           <p>{description}</p>
         </div>
 
