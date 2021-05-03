@@ -8,31 +8,29 @@ const Noticia = ({ newsURL }) => {
   const image = urlToImage ? (
     <div className="card-image">
       <img src={urlToImage} alt={title} />
-      <span className="card-title">{source.name}</span>
+
+
     </div>
   ) : null;
 
   return (
     <div className="col s12 m6 l4">
       <div className="card">
-        <div className="card-image">
-          {image}
-          <span className="card-title">{title}</span>
-        </div>
-
+        {image}
+        <span className="card-title new badge" data-badge-caption={source.name}></span>
         <div className="card-content">
+          <span className="card-title">{title}</span>
           <p>{description}</p>
         </div>
-
-        <div className="card-action">
-          <a
-            href={url}
-            target="_blank"
-            className="waves-effect waves-light btn"
-            rel="noopener noreferrer"
-          >
-            Show More
-          </a>
+        <div class="card-action">
+        <a
+        href={url}
+        target="_blank"
+        className="waves-effect waves-light btn-smal"
+        rel="noopener noreferrer"
+      >
+        Show More
+      </a>
         </div>
       </div>
     </div>
@@ -40,7 +38,7 @@ const Noticia = ({ newsURL }) => {
 };
 
 Noticia.protoTypes = {
-  newsURL: PropTypes.object.isRequired
-}
+  newsURL: PropTypes.object.isRequired,
+};
 
 export default Noticia;
