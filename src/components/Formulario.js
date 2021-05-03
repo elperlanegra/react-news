@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Formulario.module.css";
+import PropTypes from "prop-types";
 import useSelect from "../hooks/useSelect";
 
 const Formulario = ({ saveCategory }) => {
@@ -42,6 +43,10 @@ const Formulario = ({ saveCategory }) => {
       </div>
     </div>
   );
+};
+
+Formulario.protoTypes = {
+  saveCategory: PropTypes.func.isRequired,
 };
 
 export default Formulario;

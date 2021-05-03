@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Noticia = ({ newsURL }) => {
   // Extraer los datos
@@ -19,7 +20,7 @@ const Noticia = ({ newsURL }) => {
           <span className="card-title">{title}</span>
         </div>
 
-        <div className="car-content">
+        <div className="card-content">
           <p>{description}</p>
         </div>
 
@@ -37,5 +38,9 @@ const Noticia = ({ newsURL }) => {
     </div>
   );
 };
+
+Noticia.protoTypes = {
+  newsURL: PropTypes.object.isRequired
+}
 
 export default Noticia;
